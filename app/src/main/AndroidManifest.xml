@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.guohl.myservice" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".service.normal.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".service.normal.HelloIntentService" />
+        <service android:name=".service.normal.HelloService"/>
+
+        <!-- bind service-->
+        <activity android:name=".service.bind.bind.BindingActivity"/>
+        <service android:name=".service.bind.bind.LocalService"/>
+        <!--messenger service-->
+        <activity android:name=".service.bind.messenger.ActivityMessenger"/>
+        <service android:name=".service.bind.messenger.MessengerService"/>
+    </application>
+
+</manifest>
